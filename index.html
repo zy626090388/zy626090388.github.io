@@ -152,6 +152,92 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-python-selenium" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/12/12/python-selenium/">python_selenium</a>
+    </h1>
+  
+
+        
+        <a href="/2018/12/12/python-selenium/" class="archive-article-date">
+  	<time datetime="2018-12-12T05:51:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#1.搭建python_selenium<br>参考地址：<a href="https://www.cnblogs.com/101718qiong/p/8250104.html" target="_blank" rel="noopener">https://www.cnblogs.com/101718qiong/p/8250104.html</a></p>
+<h4 id="1-安装python"><a href="#1-安装python" class="headerlink" title="1.安装python"></a>1.安装python</h4><p>#####具体细节省略</p>
+<h4 id="2-安装selenium"><a href="#2-安装selenium" class="headerlink" title="2.安装selenium"></a>2.安装selenium</h4><pre><code>pip install selenium
+</code></pre><h4 id="3-安装浏览器驱动"><a href="#3-安装浏览器驱动" class="headerlink" title="3.安装浏览器驱动"></a>3.安装浏览器驱动</h4><pre><code>下载ChromeDriverServer：http://npm.taobao.org/mirrors/chromedriver/2.9/
+在chrome浏览器安装目录中以及在python安装目录下加入解压后的文件chromedriver.exe(windows)文件
+</code></pre><h5 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h5><pre><code>from selenium import webdriver
+driver = webdriver.Chrome()
+driver.get(&quot;http://www.baidu.com&quot;)
+
+driver.find_element_by_id(&apos;kw&apos;).send_keys(&apos;hello&apos;)
+</code></pre>
+        
+          <a class="article-more-a" href="/2018/12/12/python-selenium/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">python_selenium</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/12/12/python-selenium/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-linux-python3" class="article article-type-post  article-index" itemscope="" itemprop="blogPost">
   <div class="article-inner">
     
@@ -479,6 +565,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">linux_python3.6</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">python_selenium</a>
               </li>
             
             <div class="clearfix"></div>

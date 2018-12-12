@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://zy626090388.github.io">
-  <title>Archives: 2018 | Hexo</title>
+  <title>python_selenium | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="https://zy626090388.github.io/archives/2018/index.html">
+  <meta name="description" content="#1.搭建python_selenium参考地址：https://www.cnblogs.com/101718qiong/p/8250104.html 1.安装python#####具体细节省略 2.安装seleniumpip install selenium 3.安装浏览器驱动下载ChromeDriverServer：http://npm.taobao.org/mirrors/chromedri">
+<meta name="keywords" content="python_selenium">
+<meta property="og:type" content="article">
+<meta property="og:title" content="python_selenium">
+<meta property="og:url" content="https://zy626090388.github.io/2018/12/12/python-selenium/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="#1.搭建python_selenium参考地址：https://www.cnblogs.com/101718qiong/p/8250104.html 1.安装python#####具体细节省略 2.安装seleniumpip install selenium 3.安装浏览器驱动下载ChromeDriverServer：http://npm.taobao.org/mirrors/chromedri">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2018-12-12T06:59:49.964Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="python_selenium">
+<meta name="twitter:description" content="#1.搭建python_selenium参考地址：https://www.cnblogs.com/101718qiong/p/8250104.html 1.安装python#####具体细节省略 2.安装seleniumpip install selenium 3.安装浏览器驱动下载ChromeDriverServer：http://npm.taobao.org/mirrors/chromedri">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,36 +155,489 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-python-selenium" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/12/python-selenium/" class="archive-article-date">
-  	<time datetime="2018-12-12T05:51:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-12</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/12/python-selenium/">python_selenium</a>
+    <h1 class="article-title" itemprop="name">
+      python_selenium
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2018/12/12/python-selenium/" class="archive-article-date">
+  	<time datetime="2018-12-12T05:51:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#1.搭建python_selenium<br>参考地址：<a href="https://www.cnblogs.com/101718qiong/p/8250104.html" target="_blank" rel="noopener">https://www.cnblogs.com/101718qiong/p/8250104.html</a></p>
+<h4 id="1-安装python"><a href="#1-安装python" class="headerlink" title="1.安装python"></a>1.安装python</h4><p>#####具体细节省略</p>
+<h4 id="2-安装selenium"><a href="#2-安装selenium" class="headerlink" title="2.安装selenium"></a>2.安装selenium</h4><pre><code>pip install selenium
+</code></pre><h4 id="3-安装浏览器驱动"><a href="#3-安装浏览器驱动" class="headerlink" title="3.安装浏览器驱动"></a>3.安装浏览器驱动</h4><pre><code>下载ChromeDriverServer：http://npm.taobao.org/mirrors/chromedriver/2.9/
+在chrome浏览器安装目录中以及在python安装目录下加入解压后的文件chromedriver.exe(windows)文件
+</code></pre><h5 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h5><pre><code>from selenium import webdriver
+driver = webdriver.Chrome()
+driver.get(&quot;http://www.baidu.com&quot;)
+
+driver.find_element_by_id(&apos;kw&apos;).send_keys(&apos;hello&apos;)
+</code></pre><a id="more"></a>
+<h3 id="4-webdriver常用的相关api"><a href="#4-webdriver常用的相关api" class="headerlink" title="4.webdriver常用的相关api"></a>4.webdriver常用的相关api</h3><p>1.加载浏览器驱动： webdriver.Firefox()</p>
+<p>2.打开页面：get()</p>
+<p>3.关闭浏览器：quit()</p>
+<p>4.最大化窗口： maximize_window()</p>
+<p>5.设置窗口参数：set_window_size(600,800)</p>
+<p>6.后退到前一页： back()</p>
+<p>7.前进到后一页： forward()</p>
+<p>8.刷新页面： refresh()</p>
+<p>9.获得title并打印</p>
+<pre><code># coding:utf-8
+from selenium import webdriver
+title = driver.title
+print title
+#拿当前title名称进行预期比较
+if title == u&quot;百度一下，你就知道&quot;:
+　　print &quot;title yes!&quot;
+else:
+print &quot;title no!&quot;
+
+#获得当前URL并打印
+url = driver.current_url
+print url
+</code></pre><p><strong>元素定位：</strong></p>
+<pre>
+    id定位：find_element_by_id()
+    name定位：find_element_by_name()
+    class定位：find_element_by_class()
+    tag定位：find_element_by_tag_name()
+    link定位：find_element_by_link_text()
+    partial link 定位： find_element_by_partial_link_text()
+    Xpath定位:
+    绝对路径：find_element_by_xpath("绝对路径")
+    元素属性：find_element_by_xpath("//unput[@id='kw']")
+    层级与属性结合：find_element_by_xpath("//form[@id='loginForm']/ul/input[1]")
+    逻辑运算符：find_element_by_xpath("//input[@id='kw' and@class='s_ipt']")
+    CSS定位：find_element_by_css_selector()
+</pre>
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top" width="151">
+<p align="left"><strong>选择器</strong></p>
+</td>
+<td valign="top" width="123">
+<p align="left"><strong>例子</strong></p>
+</td>
+<td valign="top" width="270">
+<p align="left"><strong>描述</strong></p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">.class</p>
+</td>
+<td valign="top" width="123">
+<p align="left">.intro</p>
+</td>
+<td valign="top" width="270">
+<p align="left">Class选择器，选择class=“intro”的所有元素</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">#id</p>
+</td>
+<td valign="top" width="123">
+<p align="left">#firstname</p>
+</td>
+<td valign="top" width="270">
+<p align="left">Id选择器，选择id=“firstname”的所有元素</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">*</p>
+</td>
+<td valign="top" width="123">
+<p align="left">*</p>
+</td>
+<td valign="top" width="270">
+<p align="left">选择所有元素</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">Element</p>
+</td>
+<td valign="top" width="123">
+<p align="left">P</p>
+</td>
+<td valign="top" width="270">
+<p align="left">元素所有&lt;p&gt;元素</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">Element&gt;element</p>
+</td>
+<td valign="top" width="123">
+<p align="left">div&gt;input</p>
+</td>
+<td valign="top" width="270">
+<p align="left">选择父元素为&lt;div&gt;元素之后的所有&lt;input&gt;元素</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">Element+element</p>
+</td>
+<td valign="top" width="123">
+<p align="left">Div+input</p>
+</td>
+<td valign="top" width="270">
+<p align="left">选择同一级中紧接在&lt;div&gt;元素之后的所有&lt;input&gt;元素</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="151">
+<p align="left">[attribute=value]</p>
+</td>
+<td valign="top" width="123">
+<p align="left">[target=_blank]</p>
+</td>
+<td valign="top" width="270">
+<p align="left">选择target=”_blank”的所有元素</p>
+</td>
+</tr>
+</tbody>
+</table>
+
+<p>10.清除文本：clear()</p>
+<p>11.模拟按键输入：send_keys(*value)</p>
+<p>12.单击元素：click()</p>
+<p>13.提交表单（相当于"回车"）：submit()</p>
+<p>14.鼠标事件:</p>
+<p><strong>ActionChains 类提供了鼠标操作的常用方法:</strong></p>
+<p>引入ActionChains类：from selenium.webdriver.common.action_chains import ActionChains</p>
+<ul>
+<li>perform()：执行所有ActionsChains中存储的行为</li>
+</ul>
+<p>　<strong>　context_click() &nbsp; &nbsp;右击</strong></p>
+    <pre>RightClick = driver.find_element_by_id("id")
+    ActionChains(driver).context_click(RightClick).perform()</pre>
+<p>　　<strong>double_click() &nbsp; &nbsp;双击</strong></p>
+    DoubleClick = driver.find_element_by_name("name")
+    ActionChains(driver).double_click(DoubleClick).perform()
+<p>　<strong>　drag_and_drop(source, target) &nbsp; &nbsp;鼠标拖放</strong></p>
+<p>　　　　——source：鼠标按下的源元素；target：鼠标释放的目标元素</p>
+<pre>
+    element = driver.find_element_by_name("name")
+    target = driver.find_element_by_name("name")
+    ActionChains(driver).drag_and_drop(element, target).perform()
+</pre>
+<p>　　<strong>move_to_element() &nbsp; &nbsp;鼠标悬停在一个元素上（出现下拉列表框）</strong></p>
+<pre>
+    above = driver.find_element_by_xpath("xpath路径")
+    ActionChains(driver).move_to_element(above).perform()</pre>
+<p>　　<strong>click_and_hold() &nbsp; &nbsp;按下鼠标左键在一个元素上</strong></p>
+<pre>
+    left = driver.find_element_by_name("name")
+    ActionChains(driver).click_and_hold(left).perform()
+</pre>
+代码：
+<pre># 引入ActionChains类
+from selenium.webdriver.common.action_chains import ActionChains
+# ......
+# 定位到要右击的元素
+element=driver.find_element_by_css_selector("#kw")
+#右击操作
+ActionChains(driver).context_click(element).perform()
+# ......</pre>
+15.键盘事件：
+<table border="1" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<td valign="top" width="270">
+<p align="left">send_keys(Keys.BACK_SPACE)</p>
+</td>
+<td valign="top" width="259">
+<p align="left">删除键(BackSpace)</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="270">
+<p align="left">send_keys(Keys.SPACE)</p>
+</td>
+<td valign="top" width="259">
+<p align="left">空格键(Space)</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="270">
+<p align="left">send_keys(Keys.TAB)</p>
+</td>
+<td valign="top" width="259">
+<p align="left">制表键(Tab)</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="270">
+<p align="left">send_keys(Keys.ESCAPE)</p>
+</td>
+<td valign="top" width="259">
+<p align="left">回退键(Esc)</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="270">
+<p align="left">send_keys(Keys.eNTER)</p>
+</td>
+<td valign="top" width="259">
+<p align="left">回车键(Enter)</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="270">
+<p align="left">send_keys(Keys.CONTROL,'a')</p>
+</td>
+<td valign="top" width="259">
+<p align="left">全选(Ctrl+A)</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="270">
+<p align="left">send_keys(Keys.CONTROL,'c')</p>
+</td>
+<td valign="top" width="259">
+<p align="left">复制(Ctrl+C)</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="270">
+<p align="left">send_keys(Keys.CONTROL,'x')</p>
+</td>
+<td valign="top" width="259">
+<p align="left">剪切(Ctrl+X)</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="270">
+<p align="left">send_keys(Keys.CONTROL,'v')</p>
+</td>
+<td valign="top" width="259">
+<p align="left">粘贴(Ctrl+(Ctrl+A))</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="270">
+<p align="left">send_keys(Keys.F1)</p>
+</td>
+<td valign="top" width="259">
+<p align="left">键盘F1</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="270">
+<p align="left">……</p>
+</td>
+<td valign="top" width="259">
+<p align="left">&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td valign="top" width="270">
+<p align="left">send_keys(Keys.F12)</p>
+</td>
+<td valign="top" width="259">
+<p align="left">键盘F12</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Python代码：</p>
+
+<pre># 引入Key模块
+from selenium.webdriver.common.keys import Keys
+# ......
+# ctrl+a全选输入框内容
+driver.find_element_by_css_selector("#kw").send_keys(Keys.CONTROL,'a')
+# ......</pre>
+
+<p>16.元素等待：<br>显示等待</p>
+<pre>from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+# ......
+element=WebDriverWait(driver,5,0.5).until(EC.presence_of_element_located((By.ID,'kw')))
+# ......</pre>
+隐式等待
+<pre>from selenium.common.exceptions import NoSuchElementException
+# ......
+drive.implicitly_wait(10)
+# ......</pre>
+17.定位一组元素：
+<ul>
+<li>
+<ul>
+<li>find_elements_by_id()</li>
+<li>find_elements_by_name()</li>
+<li>find_elements_by_class()</li>
+<li>find_elements_by_tag_name()</li>
+<li>find_elements_by_link_text()</li>
+<li>find_elements_by_partial_link_text()</li>
+<li>find_elements_by_xpath()</li>
+<li>find_elements_by_css_selector()</li>
+</ul>
+</li>
+</ul>
+
+<pre># 通过tag name定位元素：driver.find_elements_by_tag_name('option')[1].click()
+# 通过xpath定位元素：
+driver.find_elements_by_xpath("//input[@type='checkbox']")
+# 通过css定位元素：
+driver.find_elements_by_css_selector('input[type=checkbox]')
+# 使用selector：
+slector=Select(driver.find_element_by_css_selector("[name='CookieDate']"))
+slector.select_by_index(1)
+# slector.select_by_visible_text("留一年")
+# slector.select_by_value("1")</pre>
+
+<p>18.多表单切换：switch_to.frame()<br>19.多窗口切换：switch_to.window()<br>当前句柄：current_window_handle<br>所有句柄：window_handles<br>20.警告框处理：switch_to_alert()</p>
+<p><ul></ul></p>
+<p><li>text：返回所有alert/confirm/prompt中的文字信息</li></p>
+<p><li>accept()：接受现有警告框</li></p>
+<p><li>dismiss()：解散现有警告框</li></p>
+<p><li>send_keys(keysToSend)：发送文本至警告框</li><br><br>21.文件上传：send_keys()</p>
+<pre>driver.find_element_by_css_selector(".uploadpic").send_keys(r'E:\picture\s.png')</pre>
+22.cookie处理:
+<ul>
+<li>get_cookies()：获得所有cookie信息</li>
+<li>get_cookie(name)：返回字典的key为“name”的cookie信息</li>
+<li>add_cookie(cookie_dict)：添加cookie。“cookie_dict”指字典对象，必须有name和value值</li>
+<li>delete_cookie(name,optionsString)：删除cookie信息。“name”是要删除的cookie的名称，“optionsString”是该cookie的选项，目前支持的选项包括“路径”，“域”</li>
+<li>delete_all_cookies()：删除所有cookie信息</li>
+</ul>
+23.滚动条设置（2种方式）：
+
+<pre># 使用scrollTop滑动到底部
+js = "var action=document.documentElement.scrollTop=10000"
+driver.execute_script(js)
+# 使用scrollTo设置位置
+driver.set_window_size(600, 600)
+js = "window.scrollTo(100,450);"
+driver.execute_script(js)</pre>
+
+<p>24.窗口截图：get_screenshot_as_file()<br>25.关闭窗口：close()<br>26.生成随机数：radint()</p>
+<p><strong>创建文件截网站以及屏幕图</strong></p>
+<pre>
+# -*- coding: utf-8 -*-
+from selenium import webdriver
+import time,os,sys
+from PIL import ImageGrab
+def mkdir(path):
+    # 去除首位空格
+    path=path.strip()
+    # 去除尾部 \ 符号
+    path=path.rstrip("\\")
+
+    # 判断路径是否存在
+    # 存在     True
+    # 不存在   False
+    isExists=os.path.exists(path)
+
+    # 判断结果
+    if not isExists:
+        # 如果不存在则创建目录
+        # 创建目录操作函数
+        os.makedirs(path) 
+
+        print (path+' 创建成功')
+        return True
+    else:
+        # 如果目录存在则不创建，并提示目录已存在
+        print (path+' 目录已存在')
+        return False
+
+
+#需要截图的网站地址
+list = ["https://mall.jd.com/view_page-49383790.html","https://mall.jd.com/index-1000000495.html","https://list.jd.com/list.html?cat=670,677,683&ev=exbrand%5F6345%402314%5F2717&page=1&sort=sort_commentcount_desc&trans=1&JL=4_5_0#J_main"]
+# 定义要创建的目录
+mkpath="d:\\python\\cut\\"
+# 调用函数
+mkdir(mkpath)
+
+option = webdriver.ChromeOptions()
+option.add_argument('disable-infobars')
+driver = webdriver.Chrome(chrome_options = option)
+#窗口最大化
+driver.maximize_window()
+#打开网站
+driver.get("https://mall.jd.com/index-1000000495.html")
+time.sleep(5)
+#定位到某个位置
+target = driver.find_element_by_name("F9")  
+driver.execute_script("arguments[0].scrollIntoView();", target)
+time.sleep(3)
+
+#截图
+#截的网站图片
+#driver.save_screenshot('buttom.png')
+#截屏幕图片
+im = ImageGrab.grab()
+filename=str(time.time())
+im.save(filename+'syb1.jpg')
+
+print(driver.title)
+#driver.find_element_by_id("kw").send_keys("selenium")
+#driver.find_element_by_id("su").click()
+time.sleep(30)
+driver.quit()
+#关闭浏览器
+#os.system('taskkill /F /IM chrome..exe')
+</pre>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/img/alipay.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,122 +649,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://zy626090388.github.io/2018/12/12/python-selenium/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/12/04/linux-python3/" class="archive-article-date">
-  	<time datetime="2018-12-04T07:14:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-04</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/12/04/linux-python3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">linux环境下安装python3.6</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/12/04/linux-python3/">linux环境下安装python3.6</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">linux_python3.6</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/20/Github-Pages/" class="archive-article-date">
-  	<time datetime="2018-11-20T09:16:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/20/Github-Pages/">手把手教你使用hexo + github pages搭建个人独立博客</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">hexo + github pages</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/11/20/hello-world/" class="archive-article-date">
-  	<time datetime="2018-11-20T09:11:48.066Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-11-20</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/11/20/hello-world/">Hello World</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -329,8 +771,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
